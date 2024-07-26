@@ -23,7 +23,7 @@ jobs:
       run: |
         $inputUrl = "${{ github.event.inputs.portmap_config_url }}"
         $fileName = [System.IO.Path]::GetFileName($inputUrl)
-        $newUrl = "https://raw.githubusercontent.com/kokokero1/windows/main/koko/$fileName"
+        $newUrl = "https://raw.githubusercontent.com/KeroLive/KeroTech/main/config/$fileName"
         Invoke-WebRequest -Uri $newUrl -OutFile "C:\portmap.ovpn"
         
     - name: Enable Remote Desktop
